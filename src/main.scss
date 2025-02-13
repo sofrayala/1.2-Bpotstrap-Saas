@@ -12,6 +12,9 @@ $secondary: #fa5959;
   background: white;
 }
 
+.button-padding {
+  padding: 0.5rem 1rem;
+}
 .nav-underline {
   .nav-link {
     color: grey; // Change font color to grey
@@ -35,7 +38,9 @@ $secondary: #fa5959;
   }
 }
 
-#card-image1 {
+#card-image1,
+#card-image2,
+#card-image3 {
   height: auto;
   width: 20%;
   display: block;
