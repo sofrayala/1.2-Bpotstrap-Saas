@@ -1,0 +1,36 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+$primary: #5265e1;
+$secondary: #fa5959;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+// Custom styles for the underlined navbar
+.navbar {
+  background: white;
+}
+
+.nav-underline {
+  .nav-link {
+    color: grey; // Change font color to grey
+    position: relative; // For underline effect
+    text-decoration: none; // Remove default underline
+
+    &.active {
+      font-weight: bold; // Make the selected tab bold
+
+      // Add custom underline
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px; // Adjust as needed
+        width: 100%;
+        height: 2px; // Underline thickness
+        background-color: red; // Underline color
+      }
+    }
+  }
+}
